@@ -110,6 +110,127 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        Badd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(ans==null){
+                    ans.setText("");
+                }
+                else{
+                    var1=Double.parseDouble(ans.getText()+"");
+                    add=true;
+                    ans.setText(null);
+                }
+            }
+        });
+        Bsub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(ans==null){
+                    ans.setText("");
+                }
+                else{
+                    var1=Double.parseDouble(ans.getText()+"");
+                    sub=true;
+                    ans.setText(null);
+                }
+            }
+        });
+        Bmlt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(ans==null){
+                    ans.setText("");
+                }
+                else{
+                    var1=Double.parseDouble(ans.getText()+"");
+                    mul=true;
+                    ans.setText(null);
+                }
+
+            }
+        });
+        Bdiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(ans==null){
+                    ans.setText("");
+                }
+                else{
+                    var1=Double.parseDouble(ans.getText()+"");
+                    div=true;
+                    ans.setText(null);
+                }
+
+            }
+        });
+        Bpoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ans.setText(ans.getText()+".");
+
+            }
+        });
+        BAC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ans.setText(null);
+            }
+        });
+        BMOD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(ans==null){
+                    ans.setText("");
+                }
+                else{
+                    var1=Double.parseDouble(ans.getText()+"");
+                    mod=true;
+                    ans.setText(null);
+                }
+
+            }
+        });
+
+        Bequ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                var2=Double.parseDouble(ans.getText()+"");
+                if(add==true){
+                    ans.setText(var1+var2+"");
+                    add=false;
+                }
+                if(sub==true){
+                    ans.setText(var1-var2+"");
+                    sub=false;
+                }
+                if(mul==true){
+                    ans.setText(var1*var2+"");
+                    mul=false;
+                }
+                if(div==true){
+                    ans.setText(var1/var2+"");
+                    div=false;
+                }
+                if(mod==true){
+                    if(var2==0){
+                        ans.setText("error");
+                    }
+                    else{
+                        ans.setText(var1%var2+"");
+                        mod=false;
+                    }
+                }
+
+
+            }
+        });
+
     }
 
 }
